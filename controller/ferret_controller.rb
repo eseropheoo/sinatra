@@ -2,9 +2,10 @@ class FerretsController < Sinatra::Base
  	configure :development do
 		register Sinatra::Reloader
 		set :public_folder, 'public'
+
 	end
 
-		#INDEX
+		# INDEX
 
 		# get '/ferrets' do
 		# 	'<h1>Rabid Ferrets<h1>'
@@ -20,7 +21,8 @@ class FerretsController < Sinatra::Base
 		end
 		#CREATE
 		post '/ferrets' do
-			"BREED MORE FERRETS"
+			"my name is  #{params[:name]}, and I love  #{params[:favorite_food]}"
+			 
 		end
 		#UPDATE 
 		patch '/ferrets/:id' do
